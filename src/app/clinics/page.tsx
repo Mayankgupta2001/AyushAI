@@ -5,8 +5,8 @@ import { useState } from 'react';
 export default function ClinicsPage() {
   const [city, setCity] = useState('');
   const [locationLoading, setLocationLoading] = useState(false);
-  const [locationError, setLocationError] = useState<string | null>(null);
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const [locationError, setLocationError] = useState<string | null>(null);
   const handleGeolocation = () => {
     if (!navigator.geolocation) {
       setLocationError('Geolocation is not supported by this browser');
