@@ -62,11 +62,26 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
+        {/* Privacy & About Links */}
+        <div className="flex justify-center gap-6 mb-6">
+          <Link
+            href="/about"
+            className="text-sm text-green-200 hover:text-white transition-colors duration-200"
+          >
+            About Us
+          </Link>
+          <span className="text-green-600">|</span>
+          <Link
+            href="/privacy"
+            className="text-sm text-green-200 hover:text-white transition-colors duration-200"
+          >
+            Privacy Policy
+          </Link>
+        </div>
+
         {/* Bottom Message */}
         <div className="text-center border-t border-green-700 pt-6">
-          <p className="text-sm">
-            Made with ❤️ for India
-          </p>
+          <p className="text-sm">Made with ❤️ for India 🇮🇳</p>
         </div>
       </div>
     </footer>
