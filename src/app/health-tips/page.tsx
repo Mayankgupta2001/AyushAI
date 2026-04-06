@@ -69,7 +69,7 @@ const staticTips: HealthTip[] = [
   }
 ];
 
-const categoryEmojis = {
+const categoryEmojis: Record<string, string> = {
   diet: '🥗',
   exercise: '🏃',
   sleep: '😴',
@@ -77,7 +77,7 @@ const categoryEmojis = {
   ayurveda: '🌿'
 };
 
-const categoryLabels = {
+const categoryLabels: Record<string, string> = {
   all: 'All',
   diet: '🥗 Diet',
   exercise: '🏃 Exercise',
@@ -97,20 +97,31 @@ export default function HealthTipsPage() {
     setError(null);
     setTip(null);
     try {
-      const res = await fetch('/api/health-tip', {
+      const timestamp = Date.now();
+      const res = await fetch(`/api/health-tip?t=${timestamp}`, {
+        method: 'GET',
         cache: 'no-store',
-        headers: { 'Cache-Control': 'no-cache' }
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+        },
       });
+
+      if (!res.ok) throw new Error(`API error: ${res.status}`);
+
       const data = await res.json();
-      const safeData = {
+      if (data.error) throw new Error(data.error);
+
+      const safeData: HealthTip = {
         tip: data.tip ?? 'Roz subah garam paani piyo',
         category: data.category ?? 'ayurveda',
-        ayurvedicAngle: data.ayurvedicAngle ?? '',
-        modernAngle: data.modernAngle ?? '',
-        quickAction: data.quickAction ?? ''
+        ayurvedicAngle: data.ayurvedicAngle ?? 'Prakriti ke anusar laabhdayak hai',
+        modernAngle: data.modernAngle ?? 'Scientific research se proven hai',
+        quickAction: data.quickAction ?? 'Aaj se shuru karo'
       };
       setTip(safeData);
-    } catch {
+    } catch (err) {
+      console.error('Health tip fetch error:', err);
       setError('Tip load nahi hui, dobara try karo');
     } finally {
       setLoading(false);
@@ -123,22 +134,21 @@ export default function HealthTipsPage() {
 
   const filteredTips = activeCategory === 'all'
     ? staticTips
-    : staticTips.filter(tip => tip.category === activeCategory);
+    : staticTips.filter(t => t.category === activeCategory);
 
   const getCategoryBadgeColor = (category: string) => {
-    const colors = {
+    const colors: Record<string, string> = {
       diet: 'bg-green-100 text-green-800',
       exercise: 'bg-blue-100 text-blue-800',
       sleep: 'bg-purple-100 text-purple-800',
       mental: 'bg-pink-100 text-pink-800',
       ayurveda: 'bg-orange-100 text-orange-800'
     };
-    return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-800';
+    return colors[category] || 'bg-gray-100 text-gray-800';
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50">
-      {/* Header */}
       <div className="bg-green-800 text-white py-8 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-2">📋 Daily Health Tips</h1>
@@ -147,7 +157,6 @@ export default function HealthTipsPage() {
       </div>
 
       <div className="max-w-4xl mx-auto p-4 space-y-8">
-        {/* Today's Tip Card */}
         <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-6 shadow-lg">
           <div className="flex items-center justify-between mb-4">
             <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">
@@ -156,59 +165,49 @@ export default function HealthTipsPage() {
             <button
               onClick={fetchTip}
               disabled={loading}
-              className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 disabled:opacity-50 transition-colors text-sm"
+              className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 disabled:opacity-50 transition-colors text-sm font-medium"
             >
               {loading ? '⏳ Load ho raha hai...' : '🔄 Nayi Tip Lao'}
             </button>
           </div>
 
           {loading ? (
-            <div className="flex items-center justify-center py-8">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div>
+            <div className="flex flex-col items-center justify-center py-10 gap-3">
+              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-green-600"></div>
+              <p className="text-gray-500 text-sm">AI tip generate kar raha hai...</p>
             </div>
           ) : error ? (
             <div className="text-center py-8">
               <p className="text-red-600 mb-4">{error}</p>
-              <button
-                onClick={fetchTip}
-                className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
-              >
-                Try Again
+              <button onClick={fetchTip} className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
+                🔄 Dobara Try Karo
               </button>
             </div>
           ) : tip ? (
             <div className="space-y-6">
-              <p className="text-xl font-semibold text-gray-800 leading-relaxed">
-                {tip.tip}
-              </p>
-
+              <p className="text-xl font-semibold text-gray-800 leading-relaxed">{tip.tip}</p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 rounded-lg p-4">
                   <h3 className="font-semibold text-green-800 mb-2">🌿 Ayurvedic Angle</h3>
-                  <p className="text-gray-700">{tip.ayurvedicAngle}</p>
+                  <p className="text-gray-700 text-sm leading-relaxed">{tip.ayurvedicAngle}</p>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
                   <h3 className="font-semibold text-blue-800 mb-2">🔬 Modern Science</h3>
-                  <p className="text-gray-700">{tip.modernAngle}</p>
+                  <p className="text-gray-700 text-sm leading-relaxed">{tip.modernAngle}</p>
                 </div>
               </div>
-
               <div className="bg-green-100 border border-green-200 rounded-lg p-4">
-                <p className="text-green-800 font-semibold">
-                  ⚡ Quick Action: {tip.quickAction}
-                </p>
+                <p className="text-green-800 font-semibold">⚡ Quick Action: {tip.quickAction}</p>
               </div>
-
-              <div className="flex justify-between items-center">
-                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryBadgeColor(tip.category ?? 'ayurveda')}`}>
-                  {tip.category ? `${categoryEmojis[tip.category] ?? '📋'} ${tip.category.charAt(0).toUpperCase() + tip.category.slice(1)}` : '📋 General'}
-                </span>
-              </div>
+              <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryBadgeColor(tip.category ?? 'ayurveda')}`}>
+                {tip.category
+                  ? `${categoryEmojis[tip.category] ?? '📋'} ${tip.category.charAt(0).toUpperCase() + tip.category.slice(1)}`
+                  : '📋 General'}
+              </span>
             </div>
           ) : null}
         </div>
 
-        {/* Category Filter Tabs */}
         <div className="flex flex-wrap gap-2 justify-center">
           {Object.entries(categoryLabels).map(([key, label]) => (
             <button
@@ -225,20 +224,15 @@ export default function HealthTipsPage() {
           ))}
         </div>
 
-        {/* Static Tips Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {filteredTips.map((staticTip, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-center justify-between mb-3">
+              <div className="mb-3">
                 <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryBadgeColor(staticTip.category)}`}>
                   {categoryEmojis[staticTip.category]} {staticTip.category.charAt(0).toUpperCase() + staticTip.category.slice(1)}
                 </span>
               </div>
-
-              <p className="text-gray-800 font-medium mb-4 leading-relaxed">
-                {staticTip.tip}
-              </p>
-
+              <p className="text-gray-800 font-medium mb-4 leading-relaxed">{staticTip.tip}</p>
               <div className="space-y-3 text-sm">
                 <div className="flex items-start">
                   <span className="text-green-600 mr-2 mt-0.5">🌿</span>
@@ -249,17 +243,13 @@ export default function HealthTipsPage() {
                   <span className="text-gray-600">{staticTip.modernAngle}</span>
                 </div>
               </div>
-
               <div className="mt-4 bg-green-50 border border-green-200 rounded-lg p-3">
-                <p className="text-green-800 text-sm font-semibold">
-                  ⚡ {staticTip.quickAction}
-                </p>
+                <p className="text-green-800 text-sm font-semibold">⚡ {staticTip.quickAction}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Wellness Quote */}
         <div className="bg-green-800 text-white rounded-lg p-8 text-center">
           <p className="text-2xl font-bold mb-2">स्वस्थस्य स्वास्थ्य रक्षणम्</p>
           <p className="text-green-100">Swasth vyakti ka swasthya raksha karna — Ayurveda ka pehla siddhant</p>
