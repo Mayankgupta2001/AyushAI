@@ -31,10 +31,13 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "AyushAI" }],
   creator: "AyushAI",
+  verification: {
+    google: "1q8Om_MrxenH3-Di3OiP7ds3Bi7wmVsS8gGb6Og_wgw",
+  },
   openGraph: {
     type: "website",
     locale: "hi_IN",
-    url: "https://ayushai.vercel.app",
+    url: "https://ayush-ai-t6bo.vercel.app",
     title: "AyushAI - आपका मुफ़्त स्वास्थ्य सहायक",
     description:
       "India ka pehla free Ayurveda + Modern Medicine AI. Symptoms check karo, remedies paao, medicine info Hindi mein.",
