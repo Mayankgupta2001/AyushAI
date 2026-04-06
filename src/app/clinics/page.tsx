@@ -5,8 +5,8 @@ import { useState } from 'react';
 export default function ClinicsPage() {
   const [city, setCity] = useState('');
   const [locationLoading, setLocationLoading] = useState(false);
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const [locationError, setLocationError] = useState<string | null>(null);
+  const [locationError, setLocationError] = useState<string | null>(null);
+
   const handleGeolocation = () => {
     if (!navigator.geolocation) {
       setLocationError('Geolocation is not supported by this browser');
@@ -27,29 +27,30 @@ const [locationError, setLocationError] = useState<string | null>(null);
           if (!response.ok) throw new Error('Reverse geocoding failed');
 
           const data = await response.json();
-          const detectedCity = data.address?.city ||
-                              data.address?.town ||
-                              data.address?.village ||
-                              data.address?.municipality ||
-                              'Unknown location';
+          const detectedCity =
+            data.address?.city ||
+            data.address?.town ||
+            data.address?.village ||
+            data.address?.municipality ||
+            'Unknown location';
 
           setCity(detectedCity);
-        } catch (error) {
+        } catch {
           setLocationError('Unable to detect your location. Please enter city manually.');
         } finally {
           setLocationLoading(false);
         }
       },
-      (error) => {
+      (err) => {
         let errorMessage = 'Unable to get your location';
-        switch (error.code) {
-          case error.PERMISSION_DENIED:
+        switch (err.code) {
+          case err.PERMISSION_DENIED:
             errorMessage = 'Location access denied. Please allow location access and try again.';
             break;
-          case error.POSITION_UNAVAILABLE:
+          case err.POSITION_UNAVAILABLE:
             errorMessage = 'Location information is unavailable.';
             break;
-          case error.TIMEOUT:
+          case err.TIMEOUT:
             errorMessage = 'Location request timed out.';
             break;
         }
@@ -59,7 +60,7 @@ const [locationError, setLocationError] = useState<string | null>(null);
       {
         enableHighAccuracy: true,
         timeout: 10000,
-        maximumAge: 300000, // 5 minutes
+        maximumAge: 300000,
       }
     );
   };
@@ -132,7 +133,9 @@ const [locationError, setLocationError] = useState<string | null>(null);
       <div className="bg-green-800 text-white py-8 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-2">🏥 Free Clinics Finder</h1>
-          <p className="text-green-100 text-lg">Nearest government hospitals, Jan Aushadhi, PHC centers dhundho</p>
+          <p className="text-green-100 text-lg">
+            Nearest government hospitals, Jan Aushadhi, PHC centers dhundho
+          </p>
         </div>
       </div>
 
@@ -198,14 +201,21 @@ const [locationError, setLocationError] = useState<string | null>(null);
 
         {/* Government Schemes Section */}
         <div>
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">🏛️ Sarkari Swasthya Yojanaen</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+            🏛️ Sarkari Swasthya Yojanaen
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {schemes.map((scheme, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+              >
                 <div className="text-4xl mb-3">{scheme.icon}</div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">{scheme.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{scheme.description}</p>
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${scheme.badgeColor}`}>
+                <span
+                  className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${scheme.badgeColor}`}
+                >
                   {scheme.badge}
                 </span>
               </div>
