@@ -1,34 +1,36 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://ayush-ai-t6bo.vercel.app';
+
   return [
     {
-      url: 'https://ayushai.vercel.app',
+      url: baseUrl,
       priority: 1.0,
       changeFrequency: 'daily',
     },
     {
-      url: 'https://ayushai.vercel.app/symptom-checker',
+      url: `${baseUrl}/symptom-checker`,
       priority: 0.9,
       changeFrequency: 'daily',
     },
     {
-      url: 'https://ayushai.vercel.app/remedies',
+      url: `${baseUrl}/remedies`,
       priority: 0.9,
       changeFrequency: 'weekly',
     },
     {
-      url: 'https://ayushai.vercel.app/medicines',
+      url: `${baseUrl}/medicines`,
       priority: 0.9,
       changeFrequency: 'weekly',
     },
     {
-      url: 'https://ayushai.vercel.app/clinics',
+      url: `${baseUrl}/clinics`,
       priority: 0.8,
       changeFrequency: 'monthly',
     },
     {
-      url: 'https://ayushai.vercel.app/health-tips',
+      url: `${baseUrl}/health-tips`,
       priority: 0.8,
       changeFrequency: 'daily',
     },
