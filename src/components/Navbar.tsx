@@ -15,6 +15,7 @@ const Navbar: React.FC = () => {
     { href: '/medicines', label: 'Medicines' },
     { href: '/clinics', label: 'Free Clinics' },
     { href: '/health-tips', label: 'Health Tips' },
+    { href: '/blog', label: 'Blog 📚' },
     { href: '/about', label: 'About' },
   ];
 

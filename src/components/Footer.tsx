@@ -8,6 +8,7 @@ const Footer: React.FC = () => {
     { href: '/medicines', label: 'Medicines' },
     { href: '/clinics', label: 'Free Clinics' },
     { href: '/health-tips', label: 'Health Tips' },
+    { href: '/blog', label: 'Blog 📚' },
   ];
 
   const helplineNumbers = [
@@ -30,7 +31,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 mb-8">
           {pageLinks.map((link) => (
             <Link
               key={link.href}
@@ -69,6 +70,13 @@ const Footer: React.FC = () => {
             className="text-sm text-green-200 hover:text-white transition-colors duration-200"
           >
             About Us
+          </Link>
+          <span className="text-green-600">|</span>
+          <Link
+            href="/blog"
+            className="text-sm text-green-200 hover:text-white transition-colors duration-200"
+          >
+            Blog
           </Link>
           <span className="text-green-600">|</span>
           <Link
