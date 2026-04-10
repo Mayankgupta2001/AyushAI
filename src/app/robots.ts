@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://ayushai.vercel.app/sitemap.xml',
+    sitemap: 'https://ayush-ai-t6bo.vercel.app/sitemap.xml',
   };
 }
