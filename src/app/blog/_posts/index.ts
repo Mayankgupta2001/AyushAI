@@ -474,6 +474,513 @@ Ayurveda में मानसिक स्वास्थ्य को "Manas 
 📞 AyushAI से Ayurvedic tips पूछें — Free!
     `,
   },
+  // Yeh 6 naye articles existing blogPosts array mein ADD karo
+// src/app/blog/_posts/index.ts mein existing array ke end mein paste karo (closing ] se pehle)
+
+  {
+    slug: 'bp-high-blood-pressure-ayurvedic',
+    title: 'High Blood Pressure — BP कम करने के आयुर्वेदिक उपाय',
+    description: 'उच्च रक्तचाप को control करने के घरेलू नुस्खे। अर्जुन छाल, सर्पगंधा, लहसुन, आंवला से BP naturally कम करें।',
+    category: 'BP/Heart',
+    categoryColor: 'bg-red-100 text-red-700',
+    icon: '❤️',
+    date: '9 अप्रैल 2025',
+    readTime: '5 मिनट',
+    content: `
+## High Blood Pressure — आयुर्वेदिक दृष्टिकोण
+
+Normal BP: 120/80 mmHg
+High BP (Hypertension): 140/90 से ज्यादा
+
+Ayurveda में इसे "Rakta Gata Vata" कहते हैं।
+
+## आयुर्वेदिक उपाय
+
+### 1. अर्जुन छाल (Terminalia Arjuna)
+- Heart tonic — BP और cholesterol दोनों कम करता है
+- रात को एक गिलास पानी में 1 चम्मच अर्जुन छाल उबालें
+- सुबह खाली पेट पिएं
+- Proven clinical results हैं
+
+### 2. सर्पगंधा (Rauwolfia serpentina)
+- Natural beta-blocker की तरह काम करता है
+- Doctor की सलाह से लें
+- Tablet form में available है
+
+### 3. लहसुन (Garlic)
+- रोज 2-3 कच्ची कली खाएं — सुबह खाली पेट
+- Allicin blood vessels relax करता है
+- BP 7-10 mmHg तक कम हो सकता है
+
+### 4. आंवला जूस
+- रोज 20-30 ml आंवला जूस पिएं
+- Vitamin C blood vessels मजबूत करता है
+
+### 5. त्रिफला
+- रात को गर्म पानी के साथ
+- Cholesterol और BP दोनों control
+
+## Lifestyle Changes
+
+- ✅ नमक कम करें — 5g/दिन से कम
+- ✅ रोज 30 मिनट walking
+- ✅ Meditation — Stress कम करें
+- ✅ Potassium ज्यादा — केला, आलू, दही
+- ❌ Smoking और Alcohol बंद
+- ❌ Processed food avoid
+
+## Yoga for BP
+
+- Shavasana — 15-20 मिनट
+- Anulom-Vilom — 10 मिनट
+- Child pose (Balasana)
+- Legs up the wall pose
+
+## जरूरी बातें
+
+- ✅ BP रोज check करें — Home BP monitor लें
+- ✅ Doctor की दवाई बंद न करें
+- ✅ ये उपाय दवाई के साथ करें
+- ✅ Target: 130/80 से नीचे
+
+📞 AyushAI से symptoms check करें — Free!
+    `,
+  },
+  {
+    slug: 'thyroid-ayurvedic-treatment',
+    title: 'Thyroid का आयुर्वेदिक इलाज — Hypothyroid और Hyperthyroid',
+    description: 'Thyroid को control करने के घरेलू उपाय। कांचनार गुग्गुल, अश्वगंधा, धनिया के बीज — thyroid naturally balance करें।',
+    category: 'Thyroid',
+    categoryColor: 'bg-teal-100 text-teal-700',
+    icon: '🦋',
+    date: '9 अप्रैल 2025',
+    readTime: '5 मिनट',
+    content: `
+## Thyroid — Ayurveda से समझें
+
+Thyroid गले में तितली के आकार की ग्रंथि है जो metabolism control करती है।
+
+## दो प्रकार
+
+### Hypothyroid (कम):
+- TSH high, T3/T4 low
+- लक्षण: थकान, वजन बढ़ना, ठंड लगना, बाल झड़ना
+
+### Hyperthyroid (ज्यादा):
+- TSH low, T3/T4 high
+- लक्षण: घबराहट, वजन कम, पसीना, दिल तेज धड़कना
+
+## Hypothyroid के आयुर्वेदिक उपाय
+
+### 1. कांचनार गुग्गुल
+- Thyroid के लिए सबसे proven Ayurvedic medicine
+- Tablet form में — Doctor की सलाह से
+- 3-6 महीने नियमित लें
+
+### 2. अश्वगंधा
+- T3/T4 levels बढ़ाने में मदद
+- रात को दूध के साथ
+- Stress भी कम करती है
+
+### 3. धनिया के बीज
+- रात को पानी में भिगोएं
+- सुबह उबालकर पिएं
+- Thyroid function support करता है
+
+### 4. नारियल तेल
+- रोज 1-2 चम्मच
+- Metabolism boost करता है
+
+## खाने में क्या लें?
+
+- ✅ Iodine — समुद्री नमक, seafood
+- ✅ Selenium — Brazil nuts, eggs
+- ✅ Zinc — seeds, nuts
+- ❌ Goitrogens कम करें — raw cabbage, soy
+
+## Hyperthyroid के उपाय
+
+- Brahmi — thyroid को calm करती है
+- Bugleweed (Ashwagandha नहीं)
+- Stress management जरूरी
+
+## Yoga
+
+- Sarvangasana (Shoulderstand) — Thyroid को stimulate करता है
+- Halasana — blood flow बढ़ता है
+- Matsyasana — throat area खुलता है
+
+## जरूरी बातें
+
+- ✅ हर 3-6 महीने TSH test करवाएं
+- ✅ Doctor की दवाई बंद न करें
+- ✅ Ayurvedic उपाय supplementary हैं
+
+📞 AyushAI से Ayurvedic tips पूछें — Free!
+    `,
+  },
+  {
+    slug: 'skin-problems-ayurvedic-remedy',
+    title: 'त्वचा की समस्याएं — Ayurvedic घरेलू उपाय 2025',
+    description: 'Acne, pimples, dark spots, dry skin, rashes — त्वचा की सभी समस्याओं का आयुर्वेदिक घरेलू इलाज। नीम, हल्दी, एलोवेरा से।',
+    category: 'Skin Care',
+    categoryColor: 'bg-pink-100 text-pink-700',
+    icon: '✨',
+    date: '9 अप्रैल 2025',
+    readTime: '6 मिनट',
+    content: `
+## त्वचा की समस्याएं — Ayurveda से
+
+Ayurveda में त्वचा की समस्याएं "Kushtha" category में आती हैं। Pitta dosha imbalance मुख्य कारण है।
+
+## Acne और Pimples
+
+### नीम face wash:
+- नीम की पत्तियों को उबालें
+- ठंडा करके face wash करें
+- Antibacterial — acne bacteria मारता है
+
+### हल्दी और शहद mask:
+- आधा चम्मच हल्दी + एक चम्मच शहद
+- 15 मिनट लगाएं — धो लें
+- हफ्ते में 2-3 बार
+
+### एलोवेरा gel:
+- Fresh aloe vera leaf से gel निकालें
+- रात को लगाएं — सुबह धोएं
+- Inflammation और redness कम होती है
+
+## Dark Spots और Pigmentation
+
+### नींबू और शहद:
+- नींबू का रस + शहद — equal parts
+- Spots पर लगाएं — 20 मिनट
+- नींबू के बाद sunscreen जरूर लगाएं
+
+### आलू का रस:
+- कच्चे आलू का रस निकालें
+- Dark spots पर लगाएं
+- Catecholase enzyme — pigmentation कम करता है
+
+### चंदन paste:
+- चंदन पाउडर + गुलाब जल
+- Face pack बनाएं — 20 मिनट
+- Skin tone even करता है
+
+## Dry Skin के उपाय
+
+- ✅ नारियल तेल — रात को लगाएं
+- ✅ घी — lips और dry patches पर
+- ✅ Milk cream — natural moisturizer
+- ✅ Sesame oil — body massage के लिए
+
+## Oily Skin
+
+- ✅ Multani mitti face pack
+- ✅ Rose water toner
+- ✅ Cucumber face pack
+- ✅ नीम और तुलसी face wash
+
+## Rashes और Itching
+
+- ✅ Neem oil लगाएं
+- ✅ Coconut oil + camphor
+- ✅ Cold compress
+- ✅ Calamine lotion
+
+## अंदर से त्वचा को सुधारें
+
+| खाएं | फायदा |
+|------|-------|
+| आंवला | Vitamin C — collagen |
+| घी | Fat soluble vitamins |
+| हल्दी | Anti-inflammatory |
+| पानी (3-4 लीटर) | Hydration |
+| सब्जियां | Antioxidants |
+
+## Doctor से कब मिलें?
+
+- Severe acne — cysts
+- Psoriasis, Eczema
+- Fungal infection
+- Allergic reaction
+
+📞 AyushAI से Ayurvedic remedies पूछें — Free!
+    `,
+  },
+  {
+    slug: 'weight-loss-ayurvedic-tips',
+    title: 'वजन कम करें — Ayurvedic तरीके और घरेलू नुस्खे 2025',
+    description: 'मोटापा कम करने के आयुर्वेदिक उपाय। त्रिफला, गुग्गुल, मेदोहर वटी — without crash diet weight loss कैसे करें।',
+    category: 'Weight Loss',
+    categoryColor: 'bg-orange-100 text-orange-700',
+    icon: '⚖️',
+    date: '9 अप्रैल 2025',
+    readTime: '6 मिनट',
+    content: `
+## वजन कम करें — Ayurvedic Approach
+
+Ayurveda में मोटापे को "Sthaulya" कहते हैं। Kapha dosha के बढ़ने से होता है।
+
+## आयुर्वेदिक उपाय
+
+### 1. त्रिफला
+- रात को गर्म पानी के साथ 1 चम्मच
+- Metabolism boost करता है
+- Digestion सुधारता है
+- सबसे safe और effective
+
+### 2. गुग्गुल
+- Thyroid function support
+- Fat metabolism बढ़ाता है
+- Tablet form में
+
+### 3. मेदोहर वटी
+- Patanjali का popular supplement
+- Kapha कम करता है
+- Doctor से check करके लें
+
+### 4. गर्म पानी + नींबू + शहद
+- सुबह खाली पेट
+- Metabolism kick-start करता है
+- Detox करता है
+
+### 5. अदरक की चाय
+- रोज 2-3 कप
+- Thermogenic — calories burn करता है
+- Digestion improve करता है
+
+## Ayurvedic Diet Tips
+
+### क्या खाएं:
+- ✅ गर्म और light खाना
+- ✅ Bitter vegetables — करेला, मेथी
+- ✅ Moong dal — easy digest
+- ✅ Barley (जौ) — wheat से बेहतर
+- ✅ Buttermilk (छाछ) — दही नहीं
+
+### क्या न खाएं:
+- ❌ Cold drinks और ice cream
+- ❌ Maida products
+- ❌ Deep fried food
+- ❌ Late night खाना
+- ❌ Refrigerated food
+
+## Eating Habits
+
+- सूरज ढलने से पहले खाना खाएं
+- दोपहर का खाना सबसे बड़ा
+- रात को हल्का खाएं
+- Slowly चबाकर खाएं
+- पानी खाने से 30 मिनट पहले या बाद में
+
+## Exercise — Kapha को कम करें
+
+- रोज सुबह 45 मिनट brisk walking
+- Surya Namaskar — 12 rounds
+- Kapalbhati — 10 मिनट
+- Swimming — best for weight loss
+
+## Realistic Goals
+
+- हफ्ते में 0.5-1 kg — safe और sustainable
+- Crash diet — temporary results
+- Lifestyle change — permanent results
+
+## Weight Loss Timeline
+
+| Method | Speed | Safety |
+|--------|-------|--------|
+| Ayurvedic | Slow | Very Safe |
+| Exercise | Moderate | Safe |
+| Diet only | Moderate | Safe |
+| Crash diet | Fast | Unsafe |
+
+📞 AyushAI से personalized tips पूछें — Free!
+    `,
+  },
+  {
+    slug: 'cold-cough-gharelu-nuskhe',
+    title: 'सर्दी-खांसी का घरेलू इलाज — 1 दिन में ठीक होने के उपाय',
+    description: 'सर्दी, खांसी, गले की खराश का तुरंत घरेलू इलाज। अदरक, शहद, तुलसी, काली मिर्च — आयुर्वेदिक नुस्खे जो काम करते हैं।',
+    category: 'Immunity',
+    categoryColor: 'bg-green-100 text-green-700',
+    icon: '🤧',
+    date: '9 अप्रैल 2025',
+    readTime: '4 मिनट',
+    content: `
+## सर्दी-खांसी — तुरंत राहत के उपाय
+
+Common cold के लिए antibiotics काम नहीं करते — घरेलू उपाय ज्यादा effective हैं।
+
+## तुरंत राहत के उपाय
+
+### 1. अदरक + शहद + नींबू
+- ताजा अदरक का रस — एक चम्मच
+- शहद — एक चम्मच
+- नींबू का रस — आधा नींबू
+- गर्म पानी में मिलाएं
+- दिन में 3-4 बार पिएं
+- 6-8 घंटे में राहत
+
+### 2. तुलसी काढ़ा
+- 10-15 तुलसी पत्ते
+- 5-6 काली मिर्च
+- अदरक एक इंच
+- 2 कप पानी में उबालें — आधा रह जाए
+- शहद मिलाकर पिएं
+- रात को सोने से पहले
+
+### 3. हल्दी दूध (Golden Milk)
+- गर्म दूध में आधा चम्मच हल्दी
+- एक चुटकी काली मिर्च
+- शहद to taste
+- Anti-viral और anti-bacterial
+
+### 4. Steam लें
+- गर्म पानी में Eucalyptus oil 2-3 drops
+- 10 मिनट steam लें
+- Congestion तुरंत खुलती है
+
+## गले की खराश के लिए
+
+### Salt water gargle:
+- गर्म पानी में आधा चम्मच नमक
+- दिन में 4-5 बार gargle करें
+- 24 घंटे में राहत
+
+### मुलेठी (Licorice):
+- मुलेठी का टुकड़ा चबाएं
+- या काढ़ा बनाएं
+- Throat soothing
+
+## खांसी के उपाय
+
+### सूखी खांसी:
+- शहद + अदरक रस — रात को
+- Pippali powder + शहद
+
+### बलगम वाली खांसी:
+- गर्म पानी ज्यादा पिएं
+- Steam लें
+- Mulethi + Ginger काढ़ा
+
+## क्या खाएं, क्या नहीं
+
+- ✅ गर्म soup — Rasam, Tomato soup
+- ✅ गर्म पानी और herbal tea
+- ✅ Vitamin C — आंवला, नींबू
+- ❌ Cold drinks और ice cream
+- ❌ Fried food
+- ❌ Dairy products (बलगम बढ़ाते हैं)
+
+## कब Doctor से मिलें?
+
+- बुखार 3 दिन से ज्यादा
+- Breathing problem
+- Chest pain
+- बच्चों में — ज्यादा सावधान
+
+📞 AyushAI से symptoms check करें — Free!
+    `,
+  },
+  {
+    slug: 'periods-irregular-ayurvedic',
+    title: 'Irregular Periods — आयुर्वेदिक उपाय और घरेलू नुस्खे',
+    description: 'अनियमित माहवारी, दर्द, PCOS — Ayurveda से treatment. Shatavari, Ashoka, Lodhra — hormones balance karne ke gharelu nuskhe.',
+    category: 'Women Health',
+    categoryColor: 'bg-purple-100 text-purple-700',
+    icon: '🌸',
+    date: '9 अप्रैल 2025',
+    readTime: '5 मिनट',
+    content: `
+## Irregular Periods — Ayurvedic दृष्टिकोण
+
+Ayurveda में menstrual health को "Artava" कहते हैं। Vata dosha imbalance मुख्य कारण है।
+
+## Irregular Periods के कारण
+
+- Stress और anxiety
+- PCOS (Polycystic Ovary Syndrome)
+- Thyroid imbalance
+- Nutritional deficiency
+- Extreme weight loss या gain
+- Hormonal imbalance
+
+## आयुर्वेदिक उपाय
+
+### 1. Shatavari (शतावरी)
+- Female reproductive system tonic
+- Hormones balance करती है
+- Powder या tablet — रात को दूध के साथ
+- 3-6 महीने नियमित लें
+
+### 2. Ashoka (अशोक)
+- Uterine tonic
+- Heavy bleeding कम करती है
+- Ayurvedic syrup — Ashokarishta available है
+- Periods regular करती है
+
+### 3. Lodhra
+- Hormonal balance
+- PCOS में helpful
+- Powder form में
+
+### 4. दालचीनी
+- Insulin sensitivity बढ़ाती है — PCOS में helpful
+- रोज आधा चम्मच दालचीनी
+- दूध या पानी के साथ
+
+### 5. अदरक की चाय
+- Periods induce करने में मदद
+- Period pain कम करती है
+- Delayed periods में useful
+
+## Period Pain के उपाय
+
+### तुरंत राहत:
+- Hot water bag पेट पर
+- Ginger tea + शहद
+- Omam (Ajwain) — एक चम्मच गर्म पानी से
+
+### Long term:
+- Yoga — Butterfly pose, Child pose
+- Magnesium — dark chocolate, nuts
+- Iron — spinach, dates
+
+## PCOS के लिए
+
+- Methi दाना — insulin resistance कम
+- Spearmint tea — androgen कम
+- Weight management जरूरी
+- Low GI diet
+
+## Lifestyle Changes
+
+- ✅ Regular sleep schedule
+- ✅ Stress management — meditation
+- ✅ Regular exercise — light
+- ✅ Iron rich diet — periods के बाद
+- ❌ Extreme dieting नहीं
+- ❌ Heavy exercise periods में नहीं
+
+## Yoga for Periods
+
+- Butterfly pose — circulation
+- Child pose — cramps
+- Cat-cow stretch
+- Legs up the wall
+
+## Doctor से कब मिलें?
+
+- 3 महीने से ज्यादा missing periods
+- बहुत heavy bleeding
+- PCOS diagnosis
+- Fertility concerns
+
+📞 AyushAI से personalized tips पूछें — Free!
+    `,
+  },
 ]
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
